@@ -4,9 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { Provider } from 'react-redux'; //this is to connect react & redux
+import { store } from './redux/store';
+
 ReactDOM.render(
   <React.StrictMode>
+
+   <Provider store={store}>   {/*passing the store inside Provider as props ; so that it will declear as global data & any one can access that */}
     <App />
+  </Provider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
